@@ -1,0 +1,126 @@
+<html>
+<head>
+<title> College Portal </title>
+<!--this line of code will keep website responsive after adding this meta tag just come back to the body section-->
+<meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<p id="time"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var timestamp = '<?=time();?>';
+    function updateTime(){
+    $('#time').html(Date(timestamp));
+    timestamp++;
+    }
+    $(function(){
+    setInterval(updateTime, 1000);
+    });
+    </script>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  background-image: linear-gradient(to right, #a9a9a9, #ffffff);
+}
+
+*
+{
+	padding: 0;
+	margin: 0;
+	
+}
+
+.menu-bar
+{
+	background-image: linear-gradient(to right, #808080, #a9a9a9);
+	
+}
+
+.nav-link
+{
+	font-size: 20px;
+	margin: 3px;
+	
+}
+
+.menu-bar .navbar-toggler
+{
+	padding-right: 0;
+	outline: none;
+	border: none;
+	
+}
+</style>
+
+<!-- header-->
+<section id="header">
+<div class="menu-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="img/college.png" width="80" height="80"></a>
+  
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Admin</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Review</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="regiser.php">Register/Login</a>
+      </li>
+    </ul>
+	
+  </div>
+</nav>
+</div>
+</section>
+
+
+<div class="footer">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<img src="img/college.png" width="50" height="50">College Portal
+					
+				</div>
+				
+					<ul class="fh5co-footer-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						
+					</ul>
+				
+
+			<div class="row copyright">
+				<div class="col-md-12 text-right">
+					<p>
+						<small class="block">&copy; OneInAMillion.</small> 
+						
+					</p>
+					
+				</div>
+			</div>
+		  </div>
+		</div>
+</div>
+</body>
+</html>
